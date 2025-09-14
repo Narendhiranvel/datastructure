@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class RotateArrayKPositions {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
-        int k = 10;
+        int k = 3;
         k = k % arr.length;
         int start = 0;
         int end = arr.length - 1;
