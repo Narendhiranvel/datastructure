@@ -1,4 +1,5 @@
 package bruteForceAlgorithms;
+
 import java.util.Arrays;
 
 //Problem: Find the largest and smallest element in an array.
@@ -8,13 +9,13 @@ import java.util.Arrays;
 public class MaxMinNumberInArray {
     public static void main(String[] args) {
         int[] arr = {54, 7, 99, 34, 89, 15, 11, 64, 5, 25};
-        System.out.println("Length of array "+arr.length);
-        for (int i = 0; i < arr.length-1; i++) {
-            for (int j = 0; j < arr.length-1; j++) {
-                if (arr[j] < arr[j+1]) {
+        System.out.println("Length of array " + arr.length);
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j +1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
@@ -23,7 +24,7 @@ public class MaxMinNumberInArray {
             System.out.print(num + " ");
         }
         System.out.println();
-        int[] maxMinArr = {arr[arr.length - 1],arr[0]};
+        int[] maxMinArr = {arr[arr.length - 1], arr[0]};
         System.out.println(Arrays.toString(maxMinArr));
 
     }
