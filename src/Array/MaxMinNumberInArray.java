@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package Array;
 
 import java.util.Arrays;
 
@@ -29,3 +29,6 @@ public class MaxMinNumberInArray {
 
     }
 }
+
+// Time Complexity O(n^2)
+// Space complexity O(1)
