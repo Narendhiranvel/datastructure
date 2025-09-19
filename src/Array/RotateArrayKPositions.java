@@ -11,41 +11,42 @@ public class RotateArrayKPositions {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
         k = k % arr.length;
+
         int start = 0;
         int end = arr.length - 1;
 
-        while (start < end) {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
+        int firstKStart = 0;
+        int firstKReverse = k - 1;
 
-            start++;
-            end--;
+        int secondKStart = k;
+        int secondKReverse = arr.length - 1;
+
+        System.out.println("Actual Array " + Arrays.toString(arr));
+
+        rotateArrayKPosition(arr, start, end);
+
+        System.out.println("Reversed Array " + Arrays.toString(arr));
+
+        rotateArrayKPosition(arr, firstKStart, firstKReverse);
+
+        System.out.println("First K reversed " + Arrays.toString(arr));
+
+        rotateArrayKPosition(arr, secondKStart, secondKReverse);
+
+        System.out.println("Second K reversed " + Arrays.toString(arr));
+
+    }
+
+    private static void rotateArrayKPosition(int[] arr, int first, int last) {
+
+        while (first < last) {
+            int temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+
+            first++;
+            last--;
         }
-        System.out.println(Arrays.toString(arr));
-        int firstStart = 0;
-        int firstReverse = k - 1;
-        while (firstStart < firstReverse) {
-            int temp = arr[firstStart];
-            arr[firstStart] = arr[firstReverse];
-            arr[firstReverse] = temp;
-
-            firstStart++;
-            firstReverse--;
-        }
-        System.out.println(Arrays.toString(arr));
-
-        int secondStart = k;
-        int secondReverse = arr.length - 1;
-        while (secondStart < secondReverse) {
-            int temp = arr[secondStart];
-            arr[secondStart] = arr[secondReverse];
-            arr[secondReverse] = temp;
-
-            secondStart++;
-            secondReverse--;
-        }
-        System.out.println(Arrays.toString(arr));
     }
 }
 
