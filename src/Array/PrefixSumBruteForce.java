@@ -4,7 +4,7 @@ package Array;
 //Input: arr = [2,4,5,7,8], query = (1,3)
 //Output: 4+5+7 = 16
 
-public class PrefixSum {
+public class PrefixSumBruteForce {
     public static void main(String[] args) {
         int[] arr = {2, 4, 5, 7, 8};
 
@@ -21,3 +21,6 @@ public class PrefixSum {
         return sum;
     }
 }
+
+//Time per query: O(n) (bad if many queries).
+//Space: O(1).
