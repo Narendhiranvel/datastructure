@@ -25,3 +25,7 @@ public class PrefixSumOp {
         return prefix[R] - prefix[L - 1];
     }
 }
+
+//Preprocessing: O(n) (build prefix array once).
+//Time per query: O(1).
+//Space: O(n).
