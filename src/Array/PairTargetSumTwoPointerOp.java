@@ -35,3 +35,7 @@ public class PairTargetSumTwoPointerOp {
 
 // Time complexity O(n)
 // Space complexity O(1)
+
+//2 pointer works only if
+// Array is Sorted(Asc or desc)
+// Only 2 numbers needs to be summed?
