@@ -1,4 +1,4 @@
-package Array;
+package TwoPointerArray;
 
 // Two Pointer
 //Remove duplicates from sorted array

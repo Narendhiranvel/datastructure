@@ -1,4 +1,4 @@
-package Array;
+package TwoPointerArray;
 
 //Move all zeros to the end
 //Input: [0,1,0,3,12]

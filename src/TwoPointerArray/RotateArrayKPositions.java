@@ -1,4 +1,4 @@
-package Array;
+package TwoPointerArray;
 
 //Rotate array (by k positions)
 //Input: arr = [1,2,3,4,5,6,7], k = 3

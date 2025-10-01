@@ -1,4 +1,4 @@
-package Array;
+package bruteForceAlgorithms;
 
 //Pair with target sum in sorted array
 //Input: [1,2,3,4,6], target=6
