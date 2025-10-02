@@ -8,7 +8,7 @@ public class MaxSumSubArray {
     public static void main(String[] args) {
         int[] arr = {2, 1, 5, 1, 3, 2};
         int k = 3;
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         int startIndex = 0;
 
         for (int i = 0; i < arr.length - 2; i++) {
