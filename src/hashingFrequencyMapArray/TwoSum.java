@@ -33,3 +33,6 @@ public class TwoSum {
         return null;
     }
 }
+
+//Time Complexity O(n)
+//Space Complexity O(n)
