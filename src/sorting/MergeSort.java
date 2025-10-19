@@ -12,10 +12,33 @@ public class MergeSort {
         int[] leftArr = new int[n1];
         int[] rightArr = new int[n2];
 
-        for (int i = 0; i < n1; i++)
+        for (int i = 0; i < n1; i++) {
             leftArr[i] = arr[left + i];
-        for (int j = 0; j < n2; j++)
+        }
+        for (int j = 0; j < n2; j++) {
             rightArr[j] = arr[mid + 1 + j];
+        }
+
+
+        // Merge the temp arrays back into arr[left..right]
+        int i = 0, j = 0, k = left;
+
+        while (i < n1 && j < n2) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k++] = leftArr[i++];
+            } else {
+                arr[k++] = rightArr[j++];
+            }
+        }
+
+        // Copy remaining elements
+        while (i < n1) {
+            arr[k++] = leftArr[i++];
+        }
+
+        while (j < n2) {
+            arr[k++] = rightArr[j++];
+        }
     }
 
     private static void mergeSort(int[] arr) {
@@ -51,3 +74,6 @@ public class MergeSort {
         printArray(arr);
     }
 }
+
+// Time Complexity: O(N log N)
+// Space Complexity: O(N)
