@@ -22,14 +22,23 @@ public class SinglyLinkedList {
         node.value = nodeValue;
         if (head == null) {
             createSinglyLinkedList(nodeValue);
-        }
-        if (location == 0) {
+        } else if (location == 0) {
             node.next = head;
             head = node;
         } else if (location >= size) {
             node.next = null;
             tail.next = node;
             tail = node;
+        } else {
+            Node prevNode = head;
+            int index = 0;
+            while (index < location - 1) {
+                prevNode = prevNode.next;
+                index++;
+            }
+            Node nextNode = prevNode.next;
+            prevNode.next = node;
+            node.next = nextNode;
         }
         size++;
         return node;
