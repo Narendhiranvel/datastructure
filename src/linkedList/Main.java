@@ -10,7 +10,12 @@ public class Main {
         sLL.insertLinkedList(5, 4);
         sLL.insertLinkedList(33, 3);
 
+        System.out.println("Traversing through Node-----------");
         sLL.traveseSinglyLinkedList();
+        System.out.println("Searching the Node----------");
         sLL.searchNode(33);
+        System.out.println("Deleting the Node and traversing--------");
+        sLL.deleteNodeFromLinkedList(33);
+        sLL.traveseSinglyLinkedList();
     }
 }
