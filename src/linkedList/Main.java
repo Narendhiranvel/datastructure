@@ -17,5 +17,8 @@ public class Main {
         System.out.println("Deleting the Node and traversing--------");
         sLL.deleteNodeFromLinkedList(33);
         sLL.traveseSinglyLinkedList();
+        System.out.println("Deleting entire linked list--------");
+        sLL.deleteEntireLinkedList();
+        sLL.traveseSinglyLinkedList();
     }
 }

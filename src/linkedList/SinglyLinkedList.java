@@ -116,4 +116,10 @@ public class SinglyLinkedList {
         size--;
         System.out.println("Deleted node value " + nodeValue + " at index " + (index + 1));
     }
+
+    public void deleteEntireLinkedList() {
+        head = null;
+        tail = null;
+        System.out.println("The entire linked list has been deleted");
+    }
 }
