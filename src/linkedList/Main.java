@@ -11,5 +11,6 @@ public class Main {
         sLL.insertLinkedList(33, 3);
 
         sLL.traveseSinglyLinkedList();
+        sLL.searchNode(33);
     }
 }
