@@ -10,10 +10,6 @@ public class Main {
         sLL.insertLinkedList(5, 4);
         sLL.insertLinkedList(33, 3);
 
-        System.out.println(sLL.head.value);
-        System.out.println(sLL.head.next.value);
-        System.out.println(sLL.head.next.next.value);
-        System.out.println(sLL.head.next.next.next.value);
-        System.out.println(sLL.head.next.next.next.next.value);
+        sLL.traveseSinglyLinkedList();
     }
 }

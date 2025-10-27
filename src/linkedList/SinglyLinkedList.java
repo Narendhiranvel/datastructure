@@ -22,6 +22,7 @@ public class SinglyLinkedList {
         node.value = nodeValue;
         if (head == null) {
             createSinglyLinkedList(nodeValue);
+            return head;
         } else if (location == 0) {
             node.next = head;
             head = node;
@@ -42,5 +43,20 @@ public class SinglyLinkedList {
         }
         size++;
         return node;
+    }
+
+    protected void traveseSinglyLinkedList() {
+        if (head == null) {
+            System.out.println("Singly Linked List Not Available");
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if (i != size - 1) {
+                    System.out.print(" -> ");
+                }
+                tempNode = tempNode.next;
+            }
+        }
     }
 }
