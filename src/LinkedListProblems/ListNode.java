@@ -17,4 +17,15 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    // Helper method to print linked list
+    public static void printList(ListNode head) {
+        ListNode temp = head;
+        while (temp != null) {
+            System.out.print(temp.val);
+            if (temp.next != null) System.out.print(" -> ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
 }
