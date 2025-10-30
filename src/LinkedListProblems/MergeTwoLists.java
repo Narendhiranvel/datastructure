@@ -17,18 +17,7 @@ public class MergeTwoLists {
         ListNode merged = solution.mergeTwoLists(list1, list2);
 
         // Print merged list
-        printList(merged);
-    }
-
-    // Helper method to print linked list
-    public static void printList(ListNode head) {
-        ListNode temp = head;
-        while (temp != null) {
-            System.out.print(temp.val);
-            if (temp.next != null) System.out.print(" -> ");
-            temp = temp.next;
-        }
-        System.out.println();
+        ListNode.printList(merged);
     }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
