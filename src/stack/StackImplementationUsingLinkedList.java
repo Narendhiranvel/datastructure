@@ -28,10 +28,8 @@ public class StackImplementationUsingLinkedList {
             node.next = null;
             head = node;
             tail = node;
-            size = 1;
-            return;
-        }
-        if (head.next == null) {
+            size++;
+        } else if (head.next == null) {
             head.next = node;
             tail = node;
             size = 2;
@@ -43,20 +41,30 @@ public class StackImplementationUsingLinkedList {
     }
 
     public int popNode() {
-        if (head == null && tail == null) {
-            System.out.println("The stack is empty");
+        if (head == null) {
+            System.out.println("The stack is empty!!!");
             return -1;
         }
         int popValue = tail.value;
+        // Case 1: Only one element
+        if (head == tail) {
+            head = null;
+            tail = null;
+            size = 0;
+            return popValue;
+        }
+        // Case 2: More than one element
         Node prevNode = head;
-        int index = 0;
-        while (index < size - 2) {
+        while (prevNode.next != tail) {
             prevNode = prevNode.next;
-            index++;
         }
         prevNode.next = null;
         tail = prevNode;
         size--;
+        if (size == 0) {
+            head = null;
+            tail = null;
+        }
         return popValue;
     }
 
