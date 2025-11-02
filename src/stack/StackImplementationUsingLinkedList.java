@@ -68,6 +68,14 @@ public class StackImplementationUsingLinkedList {
         return popValue;
     }
 
+    public int peek() {
+        if (head == null) {
+            System.out.println("The stack is empty!!!");
+            return -1;
+        }
+        return tail.value; // top of the stack
+    }
+
     public boolean isEmpty() {
         if (head == null) {
             return true;
@@ -75,21 +83,34 @@ public class StackImplementationUsingLinkedList {
         return false;
     }
 
+    public int getSizeOfStack() {
+        return size;
+    }
+
+    public String deleteStack() {
+        head = null;
+        tail = null;
+        return "Entire Stack Deleted";
+    }
+
     public static void main(String[] args) {
         StackImplementationUsingLinkedList stackList = new StackImplementationUsingLinkedList();
         stackList.pushNode(1);
+        stackList.pushNode(2);
         stackList.pushNode(3);
         stackList.pushNode(4);
+        stackList.pushNode(5);
+        stackList.pushNode(6);
 
+        System.out.println("Size od stack " + stackList.getSizeOfStack());
         stackList.traveseStackLinkedList();
-
-        System.out.println("Popping last node " + stackList.popNode());
+        System.out.println("Popping stack " + stackList.popNode());
+        System.out.println("Peeking stack " + stackList.peek());
         stackList.traveseStackLinkedList();
-
-        System.out.println("Popping last node " + stackList.popNode());
-        stackList.traveseStackLinkedList();
-
-        System.out.println("Popping last node " + stackList.popNode());
-        stackList.traveseStackLinkedList();
+        System.out.println(stackList.deleteStack());
+        System.out.println("Stack isEmpty : " + stackList.isEmpty());
     }
 }
+
+// Time Complexity: O(n)
+// Space complexity: O(n)
