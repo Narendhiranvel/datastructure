@@ -53,6 +53,12 @@ public class LinearQueueArray {
         return topOfQueue == queueArray.length - 1;
     }
 
+    public void deleteQueue() {
+        startOfQueue = -1;
+        topOfQueue = -1;
+        System.out.println("Queue deleted (logically).");
+    }
+
     public void printQueue() {
         if (isEmpty()) {
             System.out.println("Queuse is Empty!!");
@@ -92,8 +98,14 @@ public class LinearQueueArray {
         lQA.printQueue();
         System.out.println();
         System.out.println("Peek: " + lQA.peek());
-        System.out.println(lQA.dequeue());
-        System.out.println("Peek: " + lQA.peek());
+        lQA.deleteQueue();
+        lQA.printQueue();
+        lQA.enqueue(11);
+        lQA.enqueue(22);
+        lQA.enqueue(33);
+        lQA.enqueue(44);
+        System.out.println("is Full " + lQA.isFull());
+        System.out.println("Printing Queue ");
         lQA.printQueue();
     }
 }
