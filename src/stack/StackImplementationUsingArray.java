@@ -41,11 +41,28 @@ public class StackImplementationUsingArray {
         return top + 1;
     }
 
+    public void deleteStack() {
+        top = -1;
+        System.out.println("Stack has been deleted (logically).");
+    }
+
+
     public static void main(String[] args) {
         StackImplementationUsingArray stack = new StackImplementationUsingArray(5);
         stack.push(10);
         stack.push(20);
         stack.push(30);
+
+        System.out.println("Top: " + stack.peek());
+        System.out.println("Popped: " + stack.pop());
+        System.out.println("Size: " + stack.size());
+
+        stack.deleteStack();
+        System.out.println("Check stack isEmpty " + stack.isEmpty());
+
+        stack.push(99);
+        stack.push(201);
+        stack.push(333);
 
         System.out.println("Top: " + stack.peek());
         System.out.println("Popped: " + stack.pop());
