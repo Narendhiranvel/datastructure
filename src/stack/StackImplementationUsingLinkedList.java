@@ -90,6 +90,7 @@ public class StackImplementationUsingLinkedList {
     public String deleteStack() {
         head = null;
         tail = null;
+        size = 0;
         return "Entire Stack Deleted";
     }
 
