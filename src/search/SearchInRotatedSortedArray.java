@@ -4,11 +4,9 @@ public class SearchInRotatedSortedArray {
 
     /**
      * Search target in a rotated sorted array with duplicates.
-     * <p>
      * Time Complexity:
      * - Average: O(log n)
      * - Worst case: O(n) when many duplicates exist
-     * <p>
      * Space Complexity:
      * - O(1): constant extra space
      */
