@@ -2,14 +2,6 @@ package search;
 
 public class SearchInRotatedSortedArray {
 
-    /**
-     * Search target in a rotated sorted array with duplicates.
-     * Time Complexity:
-     * - Average: O(log n)
-     * - Worst case: O(n) when many duplicates exist
-     * Space Complexity:
-     * - O(1): constant extra space
-     */
     public boolean search(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
@@ -61,4 +53,13 @@ public class SearchInRotatedSortedArray {
         System.out.println("Target found? " + result);
     }
 }
+
+/**
+ * Search target in a rotated sorted array with duplicates.
+ * Time Complexity:
+ * - Average: O(log n)
+ * - Worst case: O(n) when many duplicates exist
+ * Space Complexity:
+ * - O(1): constant extra space
+ */
 
