@@ -1,5 +1,7 @@
 package matrix;
 
+import static matrix.PrintMatrix.printMatric;
+
 public class MatrixAddition {
     public static void main(String[] args) {
         int[][] A = {{1, 2},
@@ -9,7 +11,7 @@ public class MatrixAddition {
                      {7, 8}};
 
         int[][] result = addMatrix(A, B);
-        PrintMatrix.printMatric(result);
+        printMatric(result);
     }
 
     private static int[][] addMatrix(int[][] A, int[][] B) {
