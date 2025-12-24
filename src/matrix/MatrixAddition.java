@@ -1,6 +1,6 @@
 package matrix;
 
-import static matrix.PrintMatrix.printMatric;
+import static matrix.PrintMatrix.printMatrix;
 
 public class MatrixAddition {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class MatrixAddition {
                      {7, 8}};
 
         int[][] result = addMatrix(A, B);
-        printMatric(result);
+        printMatrix(result);
     }
 
     private static int[][] addMatrix(int[][] A, int[][] B) {
