@@ -26,4 +26,4 @@ public class MatrixAddition {
 }
 
 //Time Complexity: O(n^2);
-//Space Complext: O(n)
+//Space Complexity: O(n^2)
