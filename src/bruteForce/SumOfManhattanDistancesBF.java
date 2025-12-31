@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Given n integer coordinates. The task is to find the sum of the Manhattan distance between all pairs of coordinates.
 //Manhattan Distance between (x1, y1) and (x2, y2) is: |x1 - x2| + |y1 - y2|

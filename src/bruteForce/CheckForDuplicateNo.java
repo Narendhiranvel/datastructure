@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Problem: Determine if any two elements in an array are the same.
 //        Input: [1, 2, 3, 4, 2]

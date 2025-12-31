@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 import java.util.Arrays;
 

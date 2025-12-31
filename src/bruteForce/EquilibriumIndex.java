@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Equilibrium Index (left sum = right sum)
 //Input: [1,7,3,6,5,6]

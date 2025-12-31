@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Problem: Print all pairs of elements that sum to a target.
 //Input: arr = [1, 2, 3, 4, 5], target = 5

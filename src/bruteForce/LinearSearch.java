@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Problem: Check if a number exists in an array.
 //Input: arr = [5, 2, 8, 3], target = 8

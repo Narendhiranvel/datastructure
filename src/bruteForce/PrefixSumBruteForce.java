@@ -1,4 +1,4 @@
-package bruteForceAlgorithms;
+package bruteForce;
 
 //Prefix Sum for range queries
 //Input: arr = [2,4,5,7,8], query = (1,3)
