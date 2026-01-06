@@ -29,6 +29,6 @@ public class SortInWave {
     }
 }
 
-//Time Complexity: O(m log(mn))
+//Time Complexity: O(n)
 //Space Complexity : O(1)
 
