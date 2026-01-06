@@ -8,12 +8,10 @@ public class SortInWave {
 
         public void sortInWave(int arr[]) {
             int n = arr.length - 1;
-            for (int i = 0; i <= n; i++) {
-                if (i % 2 != 0) {
-                    int temp = arr[i];
-                    arr[i] = arr[i - 1];
-                    arr[i - 1] = temp;
-                }
+            for (int i = 1; i <= n; i += 2) {
+                int temp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = temp;
             }
         }
     }
