@@ -1,5 +1,5 @@
 package contributionPattern;
-
+//https://www.geeksforgeeks.org/problems/sum-of-subarrays2229/1
 public class SumOfSubArrays {
 
     static class Solution {
