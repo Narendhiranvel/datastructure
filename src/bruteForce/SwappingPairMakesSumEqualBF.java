@@ -1,5 +1,5 @@
 package bruteForce;
-
+//https://www.geeksforgeeks.org/problems/swapping-pairs-make-sum-equal4142/1
 public class SwappingPairMakesSumEqualBF {
 
     static class Solution {
