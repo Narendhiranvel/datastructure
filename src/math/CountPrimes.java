@@ -33,3 +33,6 @@ public class CountPrimes {
         System.out.println("Number of primes within " + num + " is " + countPrimes(num));
     }
 }
+
+//Time Complexity: O(n √n)
+//Space Complexity - O(1)
