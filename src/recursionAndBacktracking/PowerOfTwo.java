@@ -1,4 +1,4 @@
-package recursion;
+package recursionAndBacktracking;
 //https://leetcode.com/problems/power-of-two/description/
 
 public class PowerOfTwo {

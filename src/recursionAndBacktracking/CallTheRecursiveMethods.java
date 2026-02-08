@@ -1,4 +1,4 @@
-package recursion;
+package recursionAndBacktracking;
 
 public class CallTheRecursiveMethods {
     public static void main(String[] args) {

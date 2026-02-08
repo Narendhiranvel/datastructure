@@ -1,4 +1,4 @@
-package recursion;
+package recursionAndBacktracking;
 //https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1
 
 public class PrintNtoOneWithoutLoop {
