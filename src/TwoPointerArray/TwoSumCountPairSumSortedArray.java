@@ -50,3 +50,6 @@ public class TwoSumCountPairSumSortedArray {
         return count;
     }
 }
+
+//Time Complexity O(n)
+//Space Complexity O(1)
