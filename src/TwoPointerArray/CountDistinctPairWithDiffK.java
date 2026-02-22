@@ -37,3 +37,7 @@ public class CountDistinctPairWithDiffK {
         System.out.println(s.TotalPairs(nums, k));
     }
 }
+
+//Time Complexity O(n)
+//Space Complexity O(n)
+
