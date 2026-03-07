@@ -2,6 +2,7 @@ package TwoPointerArray;
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class LongestSubStringWithoutRepeatingChar {
 
@@ -9,7 +10,7 @@ public class LongestSubStringWithoutRepeatingChar {
         public int lengthOfLongestSubstring(String s) {
             int start = 0;
             int maxLength = 0;
-            HashMap<Character, Integer> map = new HashMap<>();
+            Map<Character, Integer> map = new HashMap<>();
 
             for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
