@@ -1,5 +1,5 @@
 package searchingProblems;
-
+//https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 public class FindFirstAndLastPositionOfNumberInSortedArray {
 
     // Binary search to find the FIRST index of target
