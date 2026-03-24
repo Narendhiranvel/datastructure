@@ -1,5 +1,5 @@
 package searchingProblems;
-
+//https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 public class TwoFindFirstAndLastPositionOfNumberInSortedArray {
 
     public int[] searchRange(int[] nums, int target) {
@@ -50,7 +50,7 @@ public class TwoFindFirstAndLastPositionOfNumberInSortedArray {
     }
 
     public static void main(String[] args) {
-        FindFirstAndLastPositionOfNumberInSortedArray s = new FindFirstAndLastPositionOfNumberInSortedArray();
+        TwoFindFirstAndLastPositionOfNumberInSortedArray s = new TwoFindFirstAndLastPositionOfNumberInSortedArray();
 
         int[] nums1 = {5,7,7,8,8,10};
         int target1 = 8;
