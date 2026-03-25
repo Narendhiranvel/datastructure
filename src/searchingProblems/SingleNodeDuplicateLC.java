@@ -1,5 +1,5 @@
 package searchingProblems;
-
+//https://leetcode.com/problems/single-element-in-a-sorted-array/submissions/1958596827/
 //Example:
 //Input: nums = [1,1,2,3,3,4,4,8,8]
 //Output: 2
@@ -27,7 +27,7 @@ public class SingleNodeDuplicateLC {
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {1, 1, 2, 3, 3};
+        int[] nums1 = {1,1,2,3,3,4,4,8,8};
         int result1 = singleNonDuplicate(nums1);
         System.out.println("Input: [1,1,2,3,3]");
         System.out.println("Output: " + result1);
