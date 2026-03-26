@@ -4,7 +4,7 @@ package searchingProblems;
 //Input: nums = [1,1,2,3,3,4,4,8,8]
 //Output: 2
 
-public class SingleNodeDuplicateLC {
+public class D_M_SingleNodeDuplicateLC {
 
     public static int singleNonDuplicate(int[] nums) {
         int left = 0;
