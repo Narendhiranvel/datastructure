@@ -16,8 +16,6 @@ public class FindMinimumInRotatedArray {
 
             if(nums[mid] > nums[end]){
                 start = mid + 1;
-            } else if(nums[mid] < nums[start]){
-                end = mid;
             } else {
                 end = mid;
             }
