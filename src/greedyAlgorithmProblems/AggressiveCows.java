@@ -1,4 +1,5 @@
 package greedyAlgorithmProblems;
+//https://www.geeksforgeeks.org/problems/aggressive-cows/0
 
 //You are given an array with unique elements of stalls[], which denote the positions of stalls. You are also given an integer k which denotes the number of aggressive cows. The task is to assign stalls to k cows such that the minimum distance between any two of them is the maximum possible.
 //
@@ -17,47 +18,43 @@ public class AggressiveCows {
 
     static class Solution {
         public int aggressiveCows(int[] stalls, int k) {
-            int n = stalls.length;
+
             Arrays.sort(stalls);
+            int start = 0;
+            int end = stalls[stalls.length - 1] - stalls[start];
+            int ans = 0;
 
-            int low = 1;
-            int high = stalls[n - 1] - stalls[0];
-            int answer = 0;
-
-            while (low <= high) {
-                int mid = low + (high - low) / 2;
-                if (canPlaceCows(stalls, k, mid)) {
-                    answer = mid;
-                    low = mid + 1; // try for larger distance
+            while (start <= end) {
+                int mid = start + (end - start) / 2;
+                if (canPlace(stalls, k, mid)) {
+                    ans = mid;
+                    start = mid + 1;
                 } else {
-                    high = mid - 1;
+                    end = mid - 1;
                 }
             }
-
-            return answer;
+            return ans;
         }
 
-        private boolean canPlaceCows(int[] stalls, int k, int distance) {
-            int count = 1;
+        private boolean canPlace(int[] stalls, int k, int dist) {
+            int cows = 1;
             int lastPlaced = stalls[0];
 
             for (int i = 1; i < stalls.length; i++) {
-                if (stalls[i] - lastPlaced >= distance) {
-                    count++;
+                if (stalls[i] - lastPlaced >= dist) {
+                    cows++;
                     lastPlaced = stalls[i];
-                    if (count == k) return true;
                 }
             }
-
-            return false;
+            return cows >= k;
         }
     }
 
     public static void main(String[] args) {
         Solution solver = new Solution();
 
-        int[] stalls = {1, 2, 4, 8, 9}; // sample stalls
-        int k = 3; // number of cows
+        int[] stalls = {2, 12, 11, 3, 26, 7}; // sample stalls
+        int k = 5; // number of cows
 
         int maxMinDistance = solver.aggressiveCows(stalls, k);
         System.out.println("Maximum minimum distance = " + maxMinDistance);
