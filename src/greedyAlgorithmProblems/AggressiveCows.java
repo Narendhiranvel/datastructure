@@ -53,8 +53,8 @@ public class AggressiveCows {
     public static void main(String[] args) {
         Solution solver = new Solution();
 
-        int[] stalls = {2, 12, 11, 3, 26, 7}; // sample stalls
-        int k = 5; // number of cows
+        int[] stalls = {1, 2 ,4, 8 ,9}; // sample stalls
+        int k = 3; // number of cows
 
         int maxMinDistance = solver.aggressiveCows(stalls, k);
         System.out.println("Maximum minimum distance = " + maxMinDistance);
