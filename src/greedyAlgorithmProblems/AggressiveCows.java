@@ -18,6 +18,7 @@ public class AggressiveCows {
 
     static class Solution {
         public int aggressiveCows(int[] stalls, int k) {
+            if (k <= 1) return 0;
 
             Arrays.sort(stalls);
             int start = 0;
@@ -53,7 +54,7 @@ public class AggressiveCows {
     public static void main(String[] args) {
         Solution solver = new Solution();
 
-        int[] stalls = {1, 2 ,4, 8 ,9}; // sample stalls
+        int[] stalls = {1, 2, 4, 8, 9}; // sample stalls
         int k = 3; // number of cows
 
         int maxMinDistance = solver.aggressiveCows(stalls, k);
