@@ -1,6 +1,6 @@
 package searchingProblems;
 //https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
-public class A_M_FindFirstAndLastPositionOfNumberInSortedArrayOp {
+public class BS_A_M_FindFirstAndLastPositionOfNumberInSortedArrayOp {
 
     // Binary search to find the FIRST index of target
     public static int findFirst(int[] nums, int target) {

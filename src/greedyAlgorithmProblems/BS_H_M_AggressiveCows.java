@@ -14,7 +14,7 @@ package greedyAlgorithmProblems;
 
 import java.util.Arrays;
 
-public class AggressiveCows {
+public class BS_H_M_AggressiveCows {
 
     static class Solution {
         public int aggressiveCows(int[] stalls, int k) {

@@ -1,6 +1,6 @@
 package searchingProblems;
 //https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
-public class E_M_SearchInRotatedSortedArray {
+public class BS_E_M_SearchInRotatedSortedArray {
 
     public boolean search(int[] nums, int target) {
         int start = 0;
@@ -47,7 +47,7 @@ public class E_M_SearchInRotatedSortedArray {
         int[] nums = {1, 0, 1, 1, 1};  // <-- your rotated array
         int target = 0;                // <-- your target value
 
-        E_M_SearchInRotatedSortedArray obj = new E_M_SearchInRotatedSortedArray();
+        BS_E_M_SearchInRotatedSortedArray obj = new BS_E_M_SearchInRotatedSortedArray();
         boolean result = obj.search(nums, target);
 
         System.out.println("Target found? " + result);

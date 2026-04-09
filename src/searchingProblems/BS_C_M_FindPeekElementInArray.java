@@ -1,7 +1,7 @@
 package searchingProblems;
 
 //https://leetcode.com/problems/find-peak-element/submissions/1957514449/
-public class C_M_FindPeekElementInArray {
+public class BS_C_M_FindPeekElementInArray {
 
     public static int findPeakElement(int[] nums) {
         int start = 0;

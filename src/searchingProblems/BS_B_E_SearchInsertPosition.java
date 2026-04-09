@@ -1,6 +1,6 @@
 package searchingProblems;
 //https://leetcode.com/problems/search-insert-position/description/
-public class B_E_SearchInsertPosition {
+public class BS_B_E_SearchInsertPosition {
 
     public static int searchInsert(int[] nums, int target) {
         int start = 0;

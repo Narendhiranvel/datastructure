@@ -1,7 +1,7 @@
 package searchingProblems;
 //https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 
-public class G_H_SearchInRotatedSortedArrayTwo {
+public class BS_G_H_SearchInRotatedSortedArrayTwo {
 
     static class Solution {
         public int findMin(int[] nums) {

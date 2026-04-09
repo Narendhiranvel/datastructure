@@ -1,6 +1,6 @@
 package searchingProblems;
 //https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
-public class F_M_FindMinimumInRotatedArray {
+public class BS_F_M_FindMinimumInRotatedArray {
 
     public int findMin(int[] nums) {
         int start = 0;
@@ -27,7 +27,7 @@ public class F_M_FindMinimumInRotatedArray {
         int[] nums = {1, 1, 1, 0, 1};
 //     {2,0,1,1,1}
 //        1,1,1,0,1
-        F_M_FindMinimumInRotatedArray f = new F_M_FindMinimumInRotatedArray();
+        BS_F_M_FindMinimumInRotatedArray f = new BS_F_M_FindMinimumInRotatedArray();
         System.out.println("Smallest element " + f.findMin(nums));
     }
 }
