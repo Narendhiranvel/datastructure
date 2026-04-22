@@ -1,5 +1,5 @@
 package sortingProblems;
-
+//https://www.geeksforgeeks.org/dsa/kth-smallest-element-in-the-array-using-constant-space-when-array-cant-be-modified/
 public class KthSmallestElementQuickSelect {
     // Method to find the kth smallest element
     public int kthSmallest(int[] arr, int k) {
@@ -53,3 +53,6 @@ public class KthSmallestElementQuickSelect {
         System.out.println("The " + k + "rd smallest element is: " + result);
     }
 }
+
+//Time Complexity: O(n) Worst: O(n²)
+// Space Complexity: Average O(log n), Worst O(n)
