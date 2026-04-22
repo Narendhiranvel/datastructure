@@ -1,5 +1,5 @@
 package sortingProblems;
-
+//https://www.geeksforgeeks.org/dsa/kth-smallest-element-in-the-array-using-constant-space-when-array-cant-be-modified/
 public class KthSmallestElement {
 
     // Method to find the kth smallest element
@@ -50,6 +50,6 @@ public class KthSmallestElement {
     }
 }
 
-//Time Complexity: O(log n) on average, O(n) worst case
-// Space Complexity: O(1)
+//Time Complexity: O(n log n) Worst: O(n²)
+// Space Complexity: Average O(log n), Worst O(n)
 
