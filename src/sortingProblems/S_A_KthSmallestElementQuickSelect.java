@@ -1,6 +1,6 @@
 package sortingProblems;
 //https://www.geeksforgeeks.org/dsa/kth-smallest-element-in-the-array-using-constant-space-when-array-cant-be-modified/
-public class KthSmallestElementQuickSelect {
+public class S_A_KthSmallestElementQuickSelect {
     // Method to find the kth smallest element
     public int kthSmallest(int[] arr, int k) {
         return quickSorting(arr, 0, arr.length - 1, k - 1);
@@ -44,7 +44,7 @@ public class KthSmallestElementQuickSelect {
 
     // Main method with sample input
     public static void main(String[] args) {
-        KthSmallestElementQuickSelect solver = new KthSmallestElementQuickSelect();
+        S_A_KthSmallestElementQuickSelect solver = new S_A_KthSmallestElementQuickSelect();
 
         int[] arr = {7, 10, 4, 3, 20, 15};
         int k = 3; // Find the 3rd smallest element
