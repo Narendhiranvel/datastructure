@@ -1,4 +1,5 @@
 package searchingProblems;
+
 //https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
 public class BS_E_M_SearchInRotatedSortedArray {
 
@@ -7,37 +8,28 @@ public class BS_E_M_SearchInRotatedSortedArray {
         int end = nums.length - 1;
 
         while (start <= end) {
+            int middle = start + (end - start) / 2;
 
-            int mid = start + (end - start) / 2;
-
-            // Case 1: found target
-            if (nums[mid] == target) {
+            if (nums[middle] == target) {
                 return true;
             }
-
-            // Case 2: duplicates block decision
-            if (nums[start] == nums[mid] && nums[mid] == nums[end]) {
+            if (nums[start] == nums[middle] && nums[middle] == nums[end]) {
                 start++;
                 end--;
-            }
-            // Case 3: left half is sorted
-            else if (nums[start] <= nums[mid]) {
-                if (nums[start] <= target && target < nums[mid]) {
-                    end = mid - 1;
+            } else if (nums[start] <= nums[middle]) {
+                if (nums[start] <= target && target < nums[middle]) {
+                    end = middle - 1;
                 } else {
-                    start = mid + 1;
+                    start = middle + 1;
                 }
-            }
-            // Case 4: right half is sorted
-            else {
-                if (nums[mid] < target && target <= nums[end]) {
-                    start = mid + 1;
+            } else {
+                if (nums[middle] < target && target <= nums[end]) {
+                    start = middle + 1;
                 } else {
-                    end = mid - 1;
+                    end = middle - 1;
                 }
             }
         }
-
         return false;
     }
 
