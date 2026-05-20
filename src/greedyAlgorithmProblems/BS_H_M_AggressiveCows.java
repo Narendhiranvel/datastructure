@@ -62,5 +62,5 @@ public class BS_H_M_AggressiveCows {
     }
 }
 
-//Time Complexity: =  O(n log n + n * log D)
+//Time Complexity: =  O(n log n + n * log D) = O(n log n)
 //Space Complexity: 0(1)
