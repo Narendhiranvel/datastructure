@@ -1,5 +1,5 @@
 package greedyAlgorithmProblems;
-
+//https://leetcode.com/problems/split-array-largest-sum/?utm_source=chatgpt.com
 public class SplitArrayLargestSum {
 
     static class Solution {
