@@ -13,21 +13,21 @@ public class BS_I_M_AllocateMinimumPages {
             int start = 0;
             int end = 0;
 
-            for (int pages : arr) {
+            for(int pages : arr){
                 start = Math.max(start, pages);
                 end += pages;
             }
 
             int ans = -1;
 
-            while (start <= end) {
-                int mid = start + (end - start) / 2;
+            while(start <= end){
+                int middle = start + (end -start)/2;
 
-                if (canAllocate(arr, k, mid)) {
-                    ans = mid;
-                    end = mid - 1;
+                if(canAllocate(arr, k, middle)){
+                    ans = middle;
+                    end = middle - 1;
                 } else {
-                    start = mid + 1;
+                    start = middle + 1;
                 }
             }
             return ans;
