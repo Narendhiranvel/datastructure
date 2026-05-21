@@ -60,3 +60,5 @@ public class BS_I_M_PainterPartition {
         System.out.println("Minimum pages = " + result);
     }
 }
+//Time Complexity  = O(n log(sum(arr))) = = O(n log n)
+//Space Complexity = O(1)

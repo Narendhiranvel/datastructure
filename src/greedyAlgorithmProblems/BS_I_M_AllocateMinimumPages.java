@@ -60,5 +60,5 @@ public class BS_I_M_AllocateMinimumPages {
     }
 }
 
-//Time Complexity  = O(n log(sum(arr)))
+//Time Complexity  = O(n log(sum(arr))) = = O(n log n)
 //Space Complexity = O(1)
