@@ -1,5 +1,5 @@
 package Array;
-
+//https://www.geeksforgeeks.org/problems/wave-array-1587115621/1?track=amazon-arrays&batchId=192
 import java.util.Arrays;
 
 public class SortInWave {
