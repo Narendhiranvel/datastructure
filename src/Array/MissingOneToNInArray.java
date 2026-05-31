@@ -5,8 +5,8 @@ public class MissingOneToNInArray {
 
     static class Solution {
         int missingNum(int arr[]) {
-            int n = arr.length;
-            long expectedSum = (long) (n + 1) * (n + 2) / 2; // sum of 1..(n+1)
+            int n = arr.length + 1;
+            long expectedSum = (long) n * (n + 1) / 2; // sum of 1..(n+1)
             long actualSum = 0;
 
             for (int num : arr) {
