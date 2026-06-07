@@ -45,7 +45,7 @@ public class RomanToInteger {
     public static void main(String[] args) {
         Solution s = new Solution();
 
-        String roman = "MCMXCIV"; // sample input
+        String roman = "MCMLXXXVII"; // sample input
         int result = s.romanToInt(roman);
 
         System.out.println(result);
