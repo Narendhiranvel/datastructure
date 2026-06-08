@@ -7,46 +7,52 @@ package TwoPointerArray;
 import java.util.Arrays;
 
 public class RotateArrayKPositions {
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7};
-        int k = 3;
-        k = k % arr.length;
+    static class Solution {
 
-        int start = 0;
-        int end = arr.length - 1;
+        public void rotate(int[] nums, int k) {
 
-        int firstKStart = 0;
-        int firstKReverse = k - 1;
+            int n = nums.length;
+            k = k % n;
 
-        int secondKStart = k;
-        int secondKReverse = arr.length - 1;
+            // Step 1: reverse whole array
+            reverse(nums, 0, n - 1);
 
-        System.out.println("Actual Array " + Arrays.toString(arr));
+            // Step 2: reverse first k elements
+            reverse(nums, 0, k - 1);
 
-        rotateArrayKPosition(arr, start, end);
+            // Step 3: reverse remaining elements
+            reverse(nums, k, n - 1);
+        }
 
-        System.out.println("Reversed Array " + Arrays.toString(arr));
+        private void reverse(int[] nums, int i, int j) {
+            while (i < j) {
+                swap(nums, i, j);
+                i++;
+                j--;
+            }
+        }
 
-        rotateArrayKPosition(arr, firstKStart, firstKReverse);
-
-        System.out.println("First K reversed " + Arrays.toString(arr));
-
-        rotateArrayKPosition(arr, secondKStart, secondKReverse);
-
-        System.out.println("Second K reversed " + Arrays.toString(arr));
-
+        private void swap(int[] nums, int num1, int num2) {
+            int temp = nums[num1];
+            nums[num1] = nums[num2];
+            nums[num2] = temp;
+        }
     }
 
-    private static void rotateArrayKPosition(int[] arr, int first, int last) {
+    public static void main(String[] args) {
+        Solution s = new Solution();
 
-        while (first < last) {
-            int temp = arr[first];
-            arr[first] = arr[last];
-            arr[last] = temp;
+        int[] nums1 = {1, 2, 3, 4, 5, 6, 7};
+        int k1 = 3;
 
-            first++;
-            last--;
-        }
+        s.rotate(nums1, k1);
+        System.out.println("Rotated array: " + Arrays.toString(nums1));
+
+        int[] nums2 = {-1, -100, 3, 99};
+        int k2 = 2;
+
+        s.rotate(nums2, k2);
+        System.out.println("Rotated array: " + Arrays.toString(nums2));
     }
 }
 
