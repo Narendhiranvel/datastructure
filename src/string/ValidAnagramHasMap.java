@@ -44,3 +44,6 @@ public class ValidAnagramHasMap {
         System.out.println(s.isAnagram("aacc", "ccac"));     // false
     }
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
