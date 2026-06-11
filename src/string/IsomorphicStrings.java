@@ -37,8 +37,8 @@ public class IsomorphicStrings {
         String str2 = "add";
         System.out.println("Are '" + str1 + "' and '" + str2 + "' isomorphic? " + s.isIsomorphic(str1, str2));
 
-        String str3 = "foo";
-        String str4 = "bar";
+        String str3 = "f11";
+        String str4 = "b23";
         System.out.println("Are '" + str3 + "' and '" + str4 + "' isomorphic? " + s.isIsomorphic(str3, str4));
 
         String str5 = "paper";
