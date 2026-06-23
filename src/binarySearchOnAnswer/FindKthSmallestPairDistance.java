@@ -1,4 +1,4 @@
-package greedyAlgorithmProblems;
+package binarySearchOnAnswer;
 
 //https://leetcode.com/problems/find-k-th-smallest-pair-distance/
 

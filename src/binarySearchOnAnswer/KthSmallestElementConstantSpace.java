@@ -1,4 +1,4 @@
-package greedyAlgorithmProblems;
+package binarySearchOnAnswer;
 
 //https://www.geeksforgeeks.org/dsa/kth-smallest-element-in-the-array-using-constant-space-when-array-cant-be-modified/
 

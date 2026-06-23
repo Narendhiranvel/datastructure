@@ -1,4 +1,4 @@
-package greedyAlgorithmProblems;
+package binarySearchOnAnswer;
 
 //https://www.geeksforgeeks.org/dsa/painters-partition-problem/
 

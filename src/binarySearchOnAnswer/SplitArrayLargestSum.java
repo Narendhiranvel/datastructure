@@ -1,4 +1,4 @@
-package greedyAlgorithmProblems;
+package binarySearchOnAnswer;
 //https://leetcode.com/problems/split-array-largest-sum/?utm_source=chatgpt.com
 public class SplitArrayLargestSum {
 
