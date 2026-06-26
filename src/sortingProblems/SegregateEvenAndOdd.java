@@ -1,4 +1,5 @@
 package sortingProblems;
+//https://www.geeksforgeeks.org/problems/segregate-even-and-odd-numbers4629/1
 
 //Given an array arr, write a program segregating even and odd numbers. The program should put all even numbers first in sorted order, and then odd numbers in sorted order.
 //        Note:- You don't have to return the array, you have to modify it in-place.
@@ -62,5 +63,5 @@ public class SegregateEvenAndOdd {
     }
 }
 
-//Time Complexity: O(log n) on average
+//Time Complexity: O(log n) on average worst O(n)
 // Space Complexity: O(1)
