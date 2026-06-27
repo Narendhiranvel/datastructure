@@ -6,14 +6,13 @@ public class MissingOneToNInArray {
     static class Solution {
         int missingNum(int arr[]) {
             int n = arr.length + 1;
-            long expectedSum = (long) n * (n + 1) / 2; // sum of 1..(n+1)
-            long actualSum = 0;
+            long actualSum = (long) n * (n + 1) / 2;
+            int arrSum = 0;
 
-            for (int num : arr) {
-                actualSum += num;
+            for (int i = 0; i < arr.length; i++) {
+                arrSum += arr[i];
             }
-
-            return (int) (expectedSum - actualSum);
+            return (int) (actualSum - arrSum);
         }
     }
 
