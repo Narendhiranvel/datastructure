@@ -10,28 +10,22 @@ public class CirculatMaximumSubArraySum {
 
             int totalSum = arr[0];
 
-            int currentMaxSum = arr[0];
-            int maxSubArrSum = arr[0];
-
             int currentMinSum = arr[0];
             int minSubArrSum = arr[0];
 
+            int currentMaxSum = arr[0];
+            int maxSubArrSum = arr[0];
+
             for (int i = 1; i < n; i++) {
-                int num = arr[i];
+                totalSum += arr[i];
 
-                totalSum += num;
+                currentMinSum = Math.min(arr[i], currentMinSum + arr[i]);
+                minSubArrSum = Math.min(currentMinSum, minSubArrSum);
 
-                currentMaxSum = Math.max(num, currentMaxSum + num);
-                maxSubArrSum = Math.max(maxSubArrSum, currentMaxSum);
-
-                currentMinSum = Math.min(num, currentMinSum + num);
-                minSubArrSum = Math.min(minSubArrSum, currentMinSum);
+                currentMaxSum = Math.max(arr[i], currentMaxSum + arr[i]);
+                maxSubArrSum = Math.max(currentMaxSum, maxSubArrSum);
             }
-
-            // All numbers are negative
-            if (maxSubArrSum < 0) {
-                return maxSubArrSum;
-            }
+            if (maxSubArrSum < 0) return maxSubArrSum;
 
             return Math.max(maxSubArrSum, totalSum - minSubArrSum);
         }
