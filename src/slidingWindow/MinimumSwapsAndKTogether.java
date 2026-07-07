@@ -1,40 +1,42 @@
 package slidingWindow;
 
+//http://geeksforgeeks.org/problems/minimum-swaps-required-to-bring-all-elements-less-than-or-equal-to-k-together4847/1
+
 public class MinimumSwapsAndKTogether {
 
     static class Solution {
 
         // Function to find minimum swaps required
         int minSwap(int[] arr, int k) {
-            int n = arr.length;
-            int count = 0;
-            int bad = 0;
+            int windowLen = 0;
 
-            // Count elements <= k
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] <= k) {
+                    windowLen++;
+                }
+            }
+
+            int maxCount = 0;
+            int count = 0;
+
+            for (int i = 0; i < windowLen; i++) {
                 if (arr[i] <= k) {
                     count++;
                 }
             }
+            maxCount = count;
 
-            // Count bad elements in first window
-            for (int i = 0; i < count; i++) {
-                if (arr[i] > k) {
-                    bad++;
+            for (int i = windowLen; i < arr.length; i++) {
+
+                if (arr[i] <= k) {
+                    count++;
                 }
+                if (arr[i - windowLen] <= k) {
+                    count--;
+                }
+                maxCount = Math.max(maxCount, count);
             }
-
-            int minSwaps = bad;
-
-            // Sliding window
-            for (int i = 0, j = count; j < n; i++, j++) {
-                if (arr[i] > k) bad--;
-                if (arr[j] > k) bad++;
-
-                minSwaps = Math.min(minSwaps, bad);
-            }
-
-            return minSwaps;
+            return windowLen - maxCount;
         }
     }
 
