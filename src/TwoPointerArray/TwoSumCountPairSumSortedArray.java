@@ -22,17 +22,18 @@ public class TwoSumCountPairSumSortedArray {
                 // Case 1: both values equal
                 if (arr[left] == arr[right]) {
                     int n = right - left + 1;
-                    count += (n * (n - 1)) / 2;
+                    count += (n * (n - 1)) / 2; //Combinations sum
                     break;
                 }
                 // Case 2: values different
                 int leftCount = 1;
                 int rightCount = 1;
-
+                // Count duplicates on the left
                 while (left + 1 < right && arr[left] == arr[left + 1]) {
                     leftCount++;
                     left++;
                 }
+                // Count duplicates on the right
                 while (right - 1 > left && arr[right] == arr[right - 1]) {
                     rightCount++;
                     right--;
