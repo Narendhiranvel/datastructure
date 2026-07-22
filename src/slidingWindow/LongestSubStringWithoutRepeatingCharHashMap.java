@@ -1,10 +1,10 @@
-package TwoPointerArray;
+package slidingWindow;
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestSubStringWithoutRepeatingChar {
+public class LongestSubStringWithoutRepeatingCharHashMap {
 
     static class Solution {
         public int lengthOfLongestSubstring(String s) {
