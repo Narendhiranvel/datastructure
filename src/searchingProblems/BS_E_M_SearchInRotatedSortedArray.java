@@ -8,25 +8,27 @@ public class BS_E_M_SearchInRotatedSortedArray {
         int end = nums.length - 1;
 
         while (start <= end) {
-            int middle = start + (end - start) / 2;
 
-            if (nums[middle] == target) {
+            int mid = start + (end - start) / 2;
+
+            if (nums[start] == target || nums[mid] == target || nums[end] == target) {
                 return true;
             }
-            if (nums[start] == nums[middle] && nums[middle] == nums[end]) {
+
+            if (nums[start] == nums[mid] && nums[mid] == nums[end]) {
                 start++;
                 end--;
-            } else if (nums[start] <= nums[middle]) {
-                if (nums[start] <= target && target < nums[middle]) {
-                    end = middle - 1;
+            } else if (nums[start] <= nums[mid]) {
+                if (nums[start] <= target && target < nums[mid]) {
+                    end = mid - 1;
                 } else {
-                    start = middle + 1;
+                    start = mid + 1;
                 }
             } else {
-                if (nums[middle] < target && target <= nums[end]) {
-                    start = middle + 1;
+                if (nums[mid] < target && target <= nums[end]) {
+                    start = mid + 1;
                 } else {
-                    end = middle - 1;
+                    end = mid - 1;
                 }
             }
         }
