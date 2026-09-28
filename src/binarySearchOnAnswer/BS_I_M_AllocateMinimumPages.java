@@ -7,42 +7,46 @@ public class BS_I_M_AllocateMinimumPages {
     static class Solution {
         public int findPages(int[] arr, int k) {
 
-            int n = arr.length;
-            if (k > n) return -1;
+            if (k > arr.length) return -1;
 
-            int start = 0;
-            int end = 0;
+            long minPages = 0;
+            long maxPages = 0;
 
-            for(int pages : arr){
-                start = Math.max(start, pages);
-                end += pages;
+            for (int num : arr) {
+
+                minPages = Math.max(num, minPages);
+                maxPages += num;
             }
 
-            int ans = -1;
+            long ans = -1;
 
-            while(start <= end){
-                int middle = start + (end -start)/2;
+            while (minPages <= maxPages) {
 
-                if(canAllocate(arr, k, middle)){
-                    ans = middle;
-                    end = middle - 1;
+                long mid = minPages + (maxPages - minPages) / 2;
+
+                if (canAllocate(arr, k, mid)) {
+
+                    ans = mid;
+                    maxPages = mid - 1;
                 } else {
-                    start = middle + 1;
+                    minPages = mid + 1;
                 }
             }
-            return ans;
+            return (int) ans;
         }
 
-        private boolean canAllocate(int[] arr, int k, int maxPages) {
-            int students = 1;
-            int pagesSum = 0;
+        private boolean canAllocate(int[] arr, int k, long maxPages) {
 
-            for (int pages : arr) {
-                if (pagesSum + pages <= maxPages) {
-                    pagesSum += pages;
+            int students = 1;
+            long pagesSum = 0;
+
+            for (int page : arr) {
+
+                if (pagesSum + page <= maxPages) {
+                    pagesSum = pagesSum + page;
                 } else {
                     students++;
-                    pagesSum = pages;
+                    pagesSum = page;
                 }
             }
             return students <= k;
