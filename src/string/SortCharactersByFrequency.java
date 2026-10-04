@@ -12,21 +12,31 @@ public class SortCharactersByFrequency {
     static class Solution {
         public String frequencySort(String s) {
 
-            Map<Character, Integer> freqMap = new HashMap<>();
+            int n = s.length();
 
-            for (char ch : s.toCharArray()) {
-                freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
+            Map<Character, Integer> map = new HashMap<>();
+
+            for (int i = 0; i < n; i++) {
+                char ch = s.charAt(i);
+                map.put(ch, map.getOrDefault(ch, 0) + 1);
             }
 
-            List<Character> list = new ArrayList<>(freqMap.keySet());
-            list.sort((a, b) -> freqMap.get(b) - freqMap.get(a));
+            List<Map.Entry<Character, Integer>> list = new ArrayList<>(map.entrySet());
+
+            list.sort((a, b) -> b.getValue() - a.getValue());
 
             StringBuilder sb = new StringBuilder();
 
-            for (char c : list) {
-                int count = freqMap.get(c);
-                sb.append(String.valueOf(c).repeat(count));
+            for (Map.Entry<Character, Integer> entry : list) {
+
+                char ch = entry.getKey();
+                int frequency = entry.getValue();
+
+                for (int i = 0; i < frequency; i++) {
+                    sb.append(ch);
+                }
             }
+
             return sb.toString();
         }
     }
