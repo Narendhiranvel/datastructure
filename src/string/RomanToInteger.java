@@ -5,19 +5,25 @@ public class RomanToInteger {
 
     static class Solution {
         public int romanToInt(String s) {
-            int total = 0;
 
-            for (int i = 0; i < s.length(); i++) {
-                int curr = value(s.charAt(i));
-                int next = (i + 1 < s.length()) ? value(s.charAt(i + 1)) : 0;
+            int n = s.length();
+            int sum = 0;
 
-                if (curr < next) {
-                    total -= curr;
+            int i = 0;
+
+            while (i < n) {
+
+                char ch = s.charAt(i);
+
+                if (i + 1 < n && value(ch) < value(s.charAt(i + 1))) {
+                    sum += (value(s.charAt(i + 1)) - value(ch));
+                    i += 2;
                 } else {
-                    total += curr;
+                    sum += value(ch);
+                    i++;
                 }
             }
-            return total;
+            return sum;
         }
 
         private int value(char c) {
