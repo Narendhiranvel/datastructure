@@ -13,12 +13,12 @@ public class ReverseWordsInAStringOp1 {
 
             // Remove extra spaces
             for (int i = 0; i < s.length(); i++) {
-                if (i > 0) {
-                    if (s.charAt(i) == ' ' && s.charAt(i - 1) == s.charAt(i)) {
-                        continue;
-                    }
+
+                if (i > 0 && s.charAt(i) == ' ' && s.charAt(i) == (s.charAt(i - 1))) {
+                    sb.append("");
+                } else {
+                    sb.append(s.charAt(i));
                 }
-                sb.append(s.charAt(i));
             }
 
             int start = 0;
