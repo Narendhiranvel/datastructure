@@ -3,7 +3,7 @@ package slidingWindow;
 
 import java.util.*;
 
-public class FindAllAnagramsInAString {
+public class FindAllAnagramsInAStringArr {
 
     static class Solution {
         public List<Integer> findAnagrams(String s, String p) {
